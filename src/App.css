@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Combo', cursive;
+}
+
+body {
+  overflow: hidden;
+  overflow-y: scroll;
+  background-color: #20444b;
+  color: #fff;
+}
+
+.banner {
+  height: 30vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.img-banner {
+  width: 150%;
+  position: relative;
+  top: -2rem;
+  left: -7rem;
+}
+
+.App {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 3rem;
+}
+
+.form {
+  width: 100%;
+  height: 50px;
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.form input {
+  width: 100%;
+  height: 100%;
+  background: none;
+  color: #fff;
+  padding-top: 20px;
+  border: none;
+  outline: 0px;
+}
+
+.form .lbl-nombre {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #c7c7c7;
+}
+
+.form .lbl-nombre:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid #2ecece;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.text-nomb {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.form input:focus+.lbl-nombre .text-nomb,
+.form input:valid+.lbl-nombre .text-nomb {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #2ecece;
+}
+
+.form input:focus+.lbl-nombre:after,
+.form input:valid+.lbl-nombre:after {
+  transform: translateX(0%);
+}
+
+button {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  align-self: flex-end;
+  background-color: #132529;
+  cursor: pointer;
+}
+
+.residents {
+  text-align: initial;
+}
+
+.info-world {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: .5rem;
+  background-color: #132529;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  max-width: 80%;
+}
+
+h1 {
+  max-width: 70%;
+  font-size: 3rem;
+  text-align: center;
+  padding: 2rem 1rem 3rem 1rem;
+}
+
+.rick-container {
+  max-width: 90%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  color: white
+}
+
+
+.rick-card {
+  border-radius: 20px;
+  background-color: #0ba18d86;
+  width: 22rem;
+  height: 8.3rem;
+  display: flex;
+  gap: 1rem;
+  position: relative;
+}
+
+.img-card {
+  border-radius: 20px 0 0 20px;
+  width: calc(100px + 2rem);
+  height: calc(100px + 2rem);
+  position: relative;
+  z-index: 1;
+
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+  padding: .5rem;
+}
+
+.status {
+  position: absolute;
+  bottom: 0;
+  width: 10rem;
+  border-radius: 10px 10px 0 10px;
+  left: 0rem;
+  font-size: .7rem;
+  background-color: #132529;
+  padding: .3rem 1.4rem;
+  z-index: 2;
+}
+
+.name-resident {
+  position: relative;
+  padding-bottom: 1rem;
+  z-index: 2;
+}
+
+hr {
+  position: absolute;
+  border-color: transparent;
+  border-radius: 20px 20px 0 0;
+  left: 0;
+  width: 100%;
+  height: 2.6rem;
+  top: 0;
+  background-color: #05292486;
+}
+
+.info-section {
+  padding: 0 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.circle {
+  width: .6rem;
+  vertical-align: baseline;
+  margin-right: .4rem;
+}
+
+.pages {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  padding: 3rem;
+}
+
+.pagination,
+a {
+  text-decoration: none;
+  color: #ffff;
+  border-radius: 100%;
+  background-color: #132529;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  vertical-align: -.4rem;
+}
+
+.autor {
+  padding: 5rem;
+  background-color: #132529;
+  width: 100%;
+  font-weight: 700;
+}
+
+@media screen and (min-width:800px) {
+  .img-banner{
+    width: 100%;
+    position: relative;
+    top: -9rem;
+    left: 0;
+  }
+  .rick-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .banner{
+    height: 40vh;
+  }
+  .img-banner{
+    width: 100%;
+    position: relative;
+    top: -12rem;
+    left: 0;
+  }
+  .rick-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .rick-card {
+    height: calc(150px + 2rem);
+  }
+
+  .img-card {
+    width: calc(150px + 2rem);
+    height: calc(150px + 2rem);
+  }
+
+  .status {
+    width: 11rem;
+    font-size: 1rem;
+  }
+
+  .name-resident{
+    padding-bottom: 3rem;
+  }
+  .info-section{
+    gap: .5rem;
+    padding: 0;
+  }
+}
