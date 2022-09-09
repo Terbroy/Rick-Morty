@@ -23,7 +23,7 @@ const RickItem = ({ resident, text }) => {
     }
 
     return (
-        <div className='rick-card' key={resident}>
+        <div  id='rick' className='rick-card' key={resident}>
             <img className='img-card' src={residents.image} alt="" />
             <div className='info-card'>
                 <h3 className='name-resident'>{residents.name}</h3>
