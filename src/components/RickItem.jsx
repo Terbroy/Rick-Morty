@@ -35,8 +35,8 @@ const RickItem = ({ resident, text }) => {
                     </svg>{residents.status} - {residents.species}</p>
                 </div>
                 <div className='info-section'>
-                    <h5> Origin:</h5>
-                    <p>{residents.location?.name}</p>
+                    <h5> Gender:</h5>
+                    <p>{residents.gender}</p>
                 </div>
                 <div className='info-section'>
                     <h5>Episodes:</h5>
